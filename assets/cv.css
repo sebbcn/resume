@@ -1,0 +1,252 @@
+
+
+
+#welcome {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+}
+
+#content-for-geeky-people {
+    width: 100%;
+    position: fixed;
+    background-color: #222;
+    height: 100%;
+}   
+
+#content-for-human-beings {
+    width: 1024px;
+    position: fixed;
+    background-color: #DDD;
+    height: 100%;
+}
+
+#back-to-start {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    padding: 10px;
+    background-color: #000;  
+    z-index: 4000;
+}
+
+
+#show-terminal {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    left: -110px;
+    padding: 10px;
+    top: 160px;
+    transform: rotate(-90deg); 
+    background-color: #222; 
+    color: #DDD;
+    font-size: 18px; 
+}
+
+
+
+#show-terminal:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#show-webpage {
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    right: -110px;
+    padding: 10px;
+    top: 160px;
+    transform: rotate(-90deg); 
+    background-color: #DDD; 
+    color: #222;
+    font-size: 18px; 
+}
+
+#show-webpage:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+#terminal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 724px; 
+}
+
+@keyframes hide_terminal
+{
+0%   {left: 0px;  }
+100% {left: 1024px; }
+}
+
+@-webkit-keyframes hide_terminal
+{
+0%   {left: 0px;  }
+100% {left: 1024px; }
+}
+
+.terminal_invisible {
+    left: 1024px;
+    animation:hide_terminal 1s;
+    animation-iteration-count: 1;
+    -webkit-animation:hide_terminal 1s;
+    -webkit-animation-iteration-count: 1;
+    
+    z-index: 3000;
+}
+
+@keyframes show_terminal
+{
+0%   {left:1024px;}
+100% {left:0px;}
+}
+
+@-webkit-keyframes show_terminal
+{
+0%   {left: 1024px;  }
+100% {left: 0px; }
+}
+
+.terminal_visible {
+    left: 0px;
+    animation:show_terminal 1s;
+    animation-iteration-count: 1;
+    -webkit-animation:show_terminal 1s;
+    -webkit-animation-iteration-count: 1;
+    
+    z-index: 2000;
+}
+
+
+@keyframes hide_webpage
+{
+0%   {right: 0px;  }
+100% {right: 1024px; }
+}
+@-webkit-keyframes hide_webpage
+{
+0%   {right: 0px;  }
+100% {right: 1024px; }
+}
+
+
+.webpage_invisible {
+    right: 1024px;
+    animation:hide_webpage 1s;
+    animation-iteration-count: 1;
+    -webkit-animation:hide_webpage 1s;
+    -webkit-animation-iteration-count: 1;
+    z-index: 3000;
+}
+
+@keyframes show_webpage
+{
+0%   {right: 1024px;  }
+100% {right: 0px; }
+}
+@-webkit-keyframes show_webpage
+{
+0%   {right: 1024px;  }
+100% {right: 0px; }
+}
+
+.webpage_visible {
+    right: 0px;
+    animation:show_webpage 1s;
+    animation-iteration-count: 1;
+    -webkit-animation:show_webpage 1s;
+    -webkit-animation-iteration-count: 1;
+    z-index: 2000;
+}
+
+.screen {
+    position: absolute;
+    top: 50px;
+    color: #FFF; 
+    font-family: monospace; 
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+
+    width: 718px; 
+    height: 433px;  
+
+}
+
+#manpage-footer {
+    position: absolute; 
+    top: 414px;
+    left: 0px;
+
+    color: #000; 
+    background-color: #FFF;
+    font-family: monospace; 
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+
+}
+
+.tab1 {
+    padding-left:70px;
+}
+
+.tab2 {
+    padding-left:120px;
+}
+
+.tab3 {
+    padding-left: 190px;
+}
+
+span.masked {
+    display: none;
+}
+
+span.show {
+    display: block;
+}
+
+span.cmd-line {
+    display: block;
+}
+
+a {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #FFF;
+}
+
+
+
+
+
+.cursor {
+    background-color: #FFF;
+    animation:cursor 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation:cursor 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes cursor
+{
+0%   {opacity:1;}
+49%   {opacity:1;}
+50% {opacity:0;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes cursor /* Safari and Chrome */
+{
+0%   {opacity:1;}
+49%   {opacity:1;}
+50% {opacity:0;}
+100% {opacity:0;}
+}
