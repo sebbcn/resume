@@ -1,4 +1,7 @@
 
+a {
+    font-weight: bold;
+}
 
 .container {
     width: 100%;
@@ -10,45 +13,69 @@
     position: fixed;
     text-align: center;
     top: 100px;
+    left:0%;
     width: 100%;
+}
+
+
+.label{
+    display:inline;
+    padding:.2em .6em .3em;
+    font-size:75%;
+    font-weight:bold;
+    line-height:2.2;
+    color:#ffffff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:.25em;
 }
 
 #content-for-geeky-people {
     width: 100%;
     position: fixed;
-    background-color: #222;
+    background-color: #0A4157;
     height: 100%;
 }   
 
 #content-for-human-beings {
     width: 100%;
     position: fixed;
-    background-color: #DDD;
+    background-color: #9DC1CF;
     height: 100%;
 }
 
-#back-to-start {
+.back-to-start {
     position: absolute;
     width: 30px;
     height: 30px;
     left: 0px;
     padding: 5px;
-    background-color: #000;  
     z-index: 4000;
 }
+
+#back-to-start a {
+    color: #000;
+}
+
+#back-to-start a.white {
+    color: #FFF;
+}
+
 
 #back-to-start a { color: #DDD; }
 #back-to-start a:hover { color: #FFF; }
 
 #show-terminal {
     position: absolute;
-    width: 180px;
+    width: 210px;
     height: 40px;
-    left: -110px;
+    left: -120px;
     padding: 10px;
-    top: 160px;
-    transform: rotate(-90deg); 
-    background-color: #222; 
+    top: 40%;
+    transform: rotate(90deg); 
+    text-align: left;
+    background-color: #0A4157; 
     color: #DDD;
     font-size: 18px; 
 }
@@ -61,14 +88,15 @@
 }
 
 #show-webpage {
-    width: 180px;
+    width: 210px;
     height: 40px;
     position: absolute;
-    right: -110px;
+    right: -120px;
     padding: 10px;
-    top: 160px;
+    top: 40%;
     transform: rotate(-90deg); 
-    background-color: #DDD; 
+    text-align: left;
+    background-color: #9DC1CF; 
     color: #222;
     font-size: 18px; 
 }
@@ -76,6 +104,10 @@
 #show-webpage:hover {
     text-decoration: none;
     color: #000;
+}
+
+#warning {
+    color: #FFF;
 }
 
 #terminal {
@@ -222,18 +254,21 @@ span.cmd-line {
     display: block;
 }
 
-a {
-    font-weight: bold;
+#footer {
+    z-index: 5000;
+    position:absolute;
+    bottom: 1%;
+    left:0%;
+    width: 100%;
+    text-align: center;
 }
 
-a:hover {
-    color: #FFF;
-}
+#footer a { color: #000; }
+#footer a:hover { text-decoration: none; }
 
 
 
-
-
+/* blinking command line cursor */
 .cursor {
     background-color: #FFF;
     animation:cursor 1s;
@@ -241,6 +276,11 @@ a:hover {
     -webkit-animation:cursor 1s;
     -webkit-animation-iteration-count: infinite;
 }
+
+#terminal a:hover {
+    color: #FFF;
+}
+
 
 @keyframes cursor
 {
@@ -250,7 +290,7 @@ a:hover {
 100% {opacity:0;}
 }
 
-@-webkit-keyframes cursor /* Safari and Chrome */
+@-webkit-keyframes cursor
 {
 0%   {opacity:1;}
 49%   {opacity:1;}

@@ -14,23 +14,85 @@
     </head>
     <body>
         <div class="container" class="text-center" >
-            <div id="back-to-start" style="display: none;">
+            <div class="back-to-start" style="display: none;">
                 <a href="#" title="Start"><i class="fa fa-home fa-lg"></i></a>
             </div>
             <div id="welcome">
-                <h2>Sébastien Soilen's Resume Page</h2>
-                <h3>Choose your team and<br>see if you can hire him!</h3> 
+                <h2>Sébastien Soilen</h2> 
+                <h3>Django developer with SysAdmin extensions</h3>
             </div>
             
             <div id="content-for-human-beings" class="webpage_invisible text-center" >
-                <a id="show-webpage" href="#">For regular people</a>
-                <h2><i class="fa fa-cog fa-spin fa-lg"></i> More to come soon...</h2>
+                <a id="show-webpage" href="#"><i class="fa fa-hand-o-up"></i>&nbsp;&nbsp;For regular people</a>
+                <div class="row" id="webpage">
+                    <div class="col-xs-6 col-sd-2 col-sd-offset-1 col-md-2 col-md-offset-1">
+                      <h2>Code</h2>
+                      <p>
+                        <span class="label label-primary">Python</span>
+                        <span class="label label-primary">Django</span>
+                        <span class="label label-primary">C</span>
+                      </p>
+                    </div>
+                    <div class="col-xs-6 col-sd-2 col-md-2">
+                      <h2>Data</h2>
+                      <p>
+                        <span class="label label-success">MySQL</span>
+                        <span class="label label-success">PostgreSQL</span>
+                        <span class="label label-success">Redis</span>
+                        <span class="label label-success">MongoDB</span>
+                        <span class="label label-success">Apache Solr</span>
+                      </p>
+                   </div>
+                    <div class="col-xs-6 col-sd-2 col-md-2">
+                      <h2>System</h2>
+                      <p>
+                        <span class="label label-warning">Nginx</span>
+                        <span class="label label-warning">AWS EC2</span>
+                        <span class="label label-warning">AWS S3</span>
+                        <span class="label label-warning">Ubuntu</span>
+                        <span class="label label-warning">Debian</span>
+                        <span class="label label-warning">CentOS</span>
+                    </p>
+                      
+                    </div>
+                    <div class="col-xs-6 col-sd-2 col-md-2">
+                      <h2>Tools</h2>
+                      <p>
+                        <span class="label label-danger">Git</span>
+                        <span class="label label-danger">Fabric</span>
+                        <span class="label label-danger">Sentry</span>
+                        <span class="label label-danger">Nagios</span>
+                      </p>
+                    </div>
+                    <div class="col-xs-6 col-sd-2 col-md-2">
+                      <h2>Web</h2>
+                      <p>
+                        <span class="label label-info">jQuery</span>
+                        <span class="label label-info">HTML5</span>
+                        <span class="label label-info">CSS3</span>
+                        <span class="label label-info">Bootstrap</span>
+                        <span class="label label-info"></span>
+                      </p>
+                    </div>
+                  </div>
             </div>
                 
             <div id="content-for-geeky-people" class="terminal_invisible text-center" >
-                <a id="show-terminal" href="#">For weird folks</a>
-                <div id="terminal">
+                <a id="show-terminal" href="#"><i class="fa fa-hand-o-up"></i>&nbsp;&nbsp;For weird people</a>
+                <!-- fake terminal -->
+                <div id="warning" class="visible-xs">
+                    <h3><i class="fa fa-times-circle"></i> Sorry your screen is too small for this...</h3>
+                </div>
+                <div id="terminal" class="hidden-xs">
+                    <!-- background image (terminal from ubuntu ;-)) -->
                     <img src="assets/terminal.png" style="margin-top: 20px;">
+
+                    <!-- Command line -->
+                    <div id="shell" class="screen" style="display:none;">
+                            <span class="cmd-line">Type 'help' + enter to get some clues...</span>
+                    </div>
+
+                    <!-- Content for manpage -->
                     <div id="manpage-seb" class="screen">
                         <span class="show">SEB(8)<span class="tab3">Sébastien Soilen</span><span class="tab3"><a href="mailto:sebastien@soilen.net">sebastien@soilen.net</a></span></span>
                         <span class="show"><br></span>
@@ -98,14 +160,23 @@
                         <span class="tab1 masked">This programer is available for telecommute freelance/contracted jobs.</span>
                         <span id="manpage-footer">Manual page seb(8) line <span id="line-count">1</span> (press q to quit)</span>
                     </div>
-
-                    <div id="shell" class="screen" style="display:none;">
-                            <span class="cmd-line">Type 'help' + enter to get some clues...</span>
-                    </div>
                 </div>
             </div>
+
+            <div id="footer">
+                <a href="mailto:sebastien@soilen.net" id="writeme" title="Write me!"><i class="fa fa-envelope-o"></i> sebastien@soilen.net</a> | 
+                <a href="https://github.com/sebbcn/resume" target="_blank" id="forkme" title="Fork me!"><i class="fa fa-github"></i> Fork this!</a> | 
+                <a href="http://twitter.com/share?text=Django developer for hire!&url=http://sebastien.soilen.net&hashtags=django,developer" target="_blank" id="shareme" title="Share me!"><i class="fa fa-twitter"></i> Share this!</a>
+            </div>
         </div>
-    <span id="new-cmd-line" class="cmd-line" style="display:none;"><span class='prompt'>resume:~ $&nbsp;</span><span class="cmd"></span><span class="cursor">&nbsp;</span></span>    
+
+    <!-- empty line for command line: prompt + cursor -->
+    <span id="new-cmd-line" class="cmd-line" style="display:none;">
+        <span class='prompt'>resume:~ $&nbsp;</span>
+        <span class="cmd"></span>  <!-- where we write the typed chars -->
+        <span class="cursor">&nbsp;</span>
+    </span>    
+    
     <script src="assets/jquery-1.10.2.min.js"></script>
     <script src="assets/cv.js"></script>
     <script src="assets/terminal.js"></script>
