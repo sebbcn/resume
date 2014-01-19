@@ -109,6 +109,9 @@ a {
     padding: 10px;
     top: 40%;
     transform: rotate(90deg); 
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    
     text-align: left;
     background-color: #0A4157; 
     color: #DDD;
@@ -130,6 +133,8 @@ a {
     padding: 10px;
     top: 40%;
     transform: rotate(-90deg); 
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     text-align: left;
     background-color: #9DC1CF; 
     color: #222;
