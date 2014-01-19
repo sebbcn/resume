@@ -125,7 +125,7 @@ var wget = function(command) {
     if ((file == 'source.zip') || (file == 'public.key') || (file == 'resume.pdf'))
     {
         print_lines([ 'Downloading ' + file + '...']);    
-        window.location.href = 'files/' + file;
+        window.open('files/' + file, '_blank');
     }
     else {
         print_lines([ 'File not found!']);
