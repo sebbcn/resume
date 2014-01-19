@@ -28,6 +28,13 @@ a {
     width: 100%;
 }
 
+#seemore {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 100%;
+}
+
 .label{
     display:inline;
     padding:.2em .6em .3em;
