@@ -67,19 +67,14 @@ a {
 
 .back-to-start {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 0px;
-    padding: 5px;
+    width: 35px;
+    height: 35px;
+    left: 3px;
+    top: 3px;
+    padding-top: 3px;
+    background-color: #DDD;
+    border-radius: 6px;
     z-index: 4000;
-}
-
-#back-to-start a {
-    color: #000;
-}
-
-#back-to-start a.white {
-    color: #FFF;
 }
 
 
@@ -114,6 +109,7 @@ a {
     
     text-align: left;
     background-color: #0A4157; 
+    border-radius: 6px;
     color: #DDD;
     font-size: 18px; 
 }
@@ -138,6 +134,7 @@ a {
     text-align: left;
     background-color: #9DC1CF; 
     color: #222;
+    border-radius: 6px;
     font-size: 18px; 
 }
 
