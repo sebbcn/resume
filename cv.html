@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Sébastien Soilen - Python/Django developer - Online Resume</title>
+        <meta name="description" content="This is Sébastien Soilen's Online Resume. He's a nice Python/Django Programmer with SysAdmin Extensions.">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="assets/bootstrap.min.css">
@@ -13,44 +14,58 @@
 
     </head>
     <body>
+        <!-- container -->
         <div class="container" class="text-center" >
+
+            <!-- Landing -->
             <div class="back-to-start" style="display: none;">
-                <a href="#" title="Start" class=home><i class="fa fa-home fa-2x"></i></a>
+                <a href="#" title="Home" class=home><i class="fa fa-home fa-2x"></i></a>
             </div>
             <div id="lang-selector">
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag"></i>
+                            En
                             <span class="caret"></span>
                         </button>
                     <ul class="dropdown-menu text-left" style="min-width: 0px;">
-                      <li><a href="/en/" title="English">En</a></li>
                       <li><a href="/fr/" title="Français">Fr</a></li>
                       <li><a href="/es/" title="Español">Es</a></li>
                     </ul>
                   </div>
             </div>
             <div id="welcome">
-                <h2>Looking for a Web developer?</h2> 
+                <h2>&lt;!-- looking for a web developer? --&gt;</h2> 
             </div>
-            <div id="chooseteam" class="hidden-xs">
-                <h3><i class="fa fa-chevron-circle-left"></i>&nbsp;Find out!&nbsp;<i class="fa fa-chevron-circle-right"></i></h3>
-
+            <div id="choose" class="hidden-xs">
+                <h4><i class="fa fa-chevron-circle-left"></i> Choose the more likely option to you. <i class="fa fa-chevron-circle-right"></i></h4>
+                <h4>(if any...)</h4>
             </div>
             <div class="visible-xs" id="seemore">
-                <button type="button" class="btn btn-success btn-lg">See more</button>
+                <button type="button" class="btn btn-success btn-lg">See more!</button>
             </div>
+            <div id="footer">
+                <a href="mailto:sebastien@soilen.net" title="sebastien@soilen.net"><i class="fa fa-envelope fa-lg"></i></a> | 
+                <a href="http://linkedin.com/in/sebastiensoilen" target="_blank" title="Find me on Linkedin"><i class="fa fa-linkedin-square fa-lg"></i></a> | 
+                
+                <a href="https://github.com/sebbcn/resume" target="_blank" title="Fork this on Github!"><i class="fa fa-github fa-lg"></i></a> | 
+                <a href="http://twitter.com/share?text=Django developer for hire!&url=http://sebastien.soilen.net&hashtags=django,developer" target="_blank" title="Share this on Twitter!"><i class="fa fa-twitter fa-lg"></i></a> |
+            </div>
+
+            <!-- end landing -->
+
+            <!-- regular resume -->
             <div id="content-for-human-beings" class="webpage_invisible text-center" >
                 <a id="show-webpage" href="#" class="hidden-xs"><i class="fa fa-hand-o-up fa-flip-horizontal"></i>&nbsp;&nbsp;For regular people</a>
-                <div class="jumbotron narrow">
+                <div class="jumbotron narrow text-left">
                     <h2>Sébastien SOILEN</h2>
-                    <p class="lead">
-                    Django developer with SysAdmin extensions
+                    <p class="lead text-left">
+                    Django developer with<br>SysAdmin extensions
                     </p>
-                    <p><a class="btn btn-lg btn-success" href="#" role="button">Hire me!</a></p>
-                </div>
-                <div id="knowledges" class="tags">
+                    <p class="text-left"><a class="btn btn-lg btn-success" href="#" role="button">Hire me!</a></p>
 
+                </div>
+
+                <div id="knowledges" class="tags">
                     <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
                       <h3><i class="fa fa-sitemap"></i> Code</h3>
                       <p>
@@ -103,8 +118,11 @@
                       </p>
                     </div>
                   </div>
+
             </div>
-                
+            <!-- end regular resume -->
+
+            <!-- nerdy resume -->
             <div id="content-for-geeky-people" class="terminal_invisible text-center hidden-xs" >
                 <a id="show-terminal" href="#"><i class="fa fa-hand-o-up"></i>&nbsp;&nbsp;For weird people</a>
                 <!-- fake terminal -->
@@ -188,13 +206,10 @@
                     </div>
                 </div>
             </div>
-
-            <div id="footer">
-                <a href="mailto:sebastien@soilen.net" id="writeme" title="sebastien@soilen.net"><i class="fa fa-envelope fa-lg"></i></a> | 
-                <a href="https://github.com/sebbcn/resume" target="_blank" id="forkme" title="Fork this on Github!"><i class="fa fa-github fa-lg"></i></a> | 
-                <a href="http://twitter.com/share?text=Django developer for hire!&url=http://sebastien.soilen.net&hashtags=django,developer" target="_blank" id="shareme" title="Share this on Twitter!"><i class="fa fa-twitter fa-lg"></i></a> |
-            </div>
+            <!-- end nerdy resume -->
+              
         </div>
+        <!-- end container -->
 
     <!-- empty line for command line: prompt + cursor -->
     <span id="new-cmd-line" class="cmd-line" style="display:none;">
@@ -202,6 +217,7 @@
         <span class="cmd"></span><span class="cursor">&nbsp;</span>
     </span>    
     
+    <!-- here comes the magic... -->
     <script src="assets/jquery-1.10.2.min.js"></script>
     <script src="assets/bootstrap.min.js"></script>
     <script src="assets/cv.js"></script>
