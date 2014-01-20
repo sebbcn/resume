@@ -15,7 +15,20 @@
     <body>
         <div class="container" class="text-center" >
             <div class="back-to-start" style="display: none;">
-                <a href="#" title="Start"><i class="fa fa-home fa-2x"></i></a>
+                <a href="#" title="Start" class=home><i class="fa fa-home fa-2x"></i></a>
+            </div>
+            <div id="lang-selector">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag"></i>
+                            <span class="caret"></span>
+                        </button>
+                    <ul class="dropdown-menu text-left" style="min-width: 0px;">
+                      <li><a href="/en/" title="English">En</a></li>
+                      <li><a href="/fr/" title="Français">Fr</a></li>
+                      <li><a href="/es/" title="Español">Es</a></li>
+                    </ul>
+                  </div>
             </div>
             <div id="welcome">
                 <h2>Looking for a Web developer?</h2> 
@@ -36,7 +49,7 @@
                     </p>
                     <p><a class="btn btn-lg btn-success" href="#" role="button">Hire me!</a></p>
                 </div>
-                <div id="webpage">
+                <div id="knowledges" class="tags">
 
                     <div class="col-xs-12 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
                       <h3><i class="fa fa-sitemap"></i> Code</h3>
@@ -170,18 +183,16 @@
                         <span class="masked"><br></span>
                         <span class="masked"><strong>AVAILABILITY</strong></span>
                         <span class="tab1 masked">This programer is available for telecommute freelance/contracted jobs.</span>
+                        <span class="masked"><br></span>
                         <span id="manpage-footer">Manual page seb(8) line <span id="line-count">1</span> (press q to quit)</span>
                     </div>
                 </div>
             </div>
 
             <div id="footer">
-                <a href="mailto:sebastien@soilen.net" id="writeme" title="Write me!"><i class="fa fa-envelope-o"></i> sebastien@soilen.net</a> | 
-                <a href="https://github.com/sebbcn/resume" target="_blank" id="forkme" title="Fork me!"><i class="fa fa-github"></i> Fork this!</a> | 
-                <a href="http://twitter.com/share?text=Django developer for hire!&url=http://sebastien.soilen.net&hashtags=django,developer" target="_blank" id="shareme" title="Share me!"><i class="fa fa-twitter"></i> Share this!</a><br>
-                <i class="fa fa-flag"></i>&nbsp;<a href="/en/" title="English">En</span> | 
-                <a href="/fr/" title="Français">Fr</span> | 
-                <a href="/es/" title="Español">Es</span>
+                <a href="mailto:sebastien@soilen.net" id="writeme" title="sebastien@soilen.net"><i class="fa fa-envelope fa-lg"></i></a> | 
+                <a href="https://github.com/sebbcn/resume" target="_blank" id="forkme" title="Fork this on Github!"><i class="fa fa-github fa-lg"></i></a> | 
+                <a href="http://twitter.com/share?text=Django developer for hire!&url=http://sebastien.soilen.net&hashtags=django,developer" target="_blank" id="shareme" title="Share this on Twitter!"><i class="fa fa-twitter fa-lg"></i></a> |
             </div>
         </div>
 
@@ -192,6 +203,7 @@
     </span>    
     
     <script src="assets/jquery-1.10.2.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
     <script src="assets/cv.js"></script>
     <script src="assets/terminal.js"></script>
     </body>
