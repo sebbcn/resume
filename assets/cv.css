@@ -306,6 +306,7 @@ a.home:hover { text-decoration: none; }
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 
 span.masked {
