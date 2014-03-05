@@ -65,7 +65,9 @@ var append_char = function (e) {
     cmd_line = $('#shell .cmd').last();
     content = cmd_line.html();
     if (content.length < 70){
-        added_char = String.fromCharCode(e.charCode)
+
+        var char = $.getChar(e);        
+        added_char = String.fromCharCode(char);    
         added_char = filter_char(added_char);
         cmd_line.html(content + added_char);
     }
@@ -161,12 +163,12 @@ var help = function() {
 
 
 var run_shell = function(e) {   
-    if (e.which == 13)
+    if (e.keyCode == 13)
     {
             run_command();
             create_shell_line();
     }
-    else if (e.which == 8)
+    else if (e.keyCode == 8)
     {
         delete_char();
     }
@@ -208,14 +210,16 @@ var enter_manpage_mode = function(manpage) {
 
 
 var run_manpage = function(e) {
-    if(e.keyCode == 40) {
-        e.preventDefault();
+    if ((e.keyCode == 40) || (e.keyCode == 13)) {
         page_scrolldown('#manpage-seb', true);
     }
     else if (e.keyCode == 38) {
-        e.preventDefault();
         page_scrollup('#manpage-seb', true);
     }
+    else if(e.keyCode == 81) {
+        enter_shell_mode(); 
+    }
+
     else if(e.charCode == 113) {
         enter_shell_mode(); 
     }
@@ -234,8 +238,9 @@ var run_terminal = function(e) {
 
 }
 
-$(document).keypress(function(e) {
+$(document).keydown(function(e) {
+    e.preventDefault();
     if ($('#content-for-geeky-people').hasClass('terminal_visible')){
         run_terminal(e);    
-    }
+    } 
 });
