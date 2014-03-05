@@ -244,3 +244,8 @@ $(document).keydown(function(e) {
         run_terminal(e);    
     } 
 });
+
+$(document).keydown(function(e) {
+    e.preventDefault();
+});
+
