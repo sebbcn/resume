@@ -110,7 +110,7 @@ a.home:hover { text-decoration: none; }
     height: 40px;
     left: -120px;
     padding: 10px;
-    top: 40%;
+    top: 200px;
     transform: rotate(90deg); 
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -135,7 +135,7 @@ a.home:hover { text-decoration: none; }
     position: absolute;
     right: -120px;
     padding: 10px;
-    top: 40%;
+    top: 200px;
     transform: rotate(-90deg); 
     -ms-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -175,6 +175,11 @@ a.home:hover { text-decoration: none; }
 {
 0%   {left: 0%;  }
 100% {left: 100%; }
+}
+
+.terminal_start {
+    left: 100%;
+    z-index: 3000;
 }
 
 .terminal_invisible {
@@ -219,6 +224,11 @@ a.home:hover { text-decoration: none; }
 {
 0%   {right: 0%;  }
 100% {right: 100%; }
+}
+
+.webpage_start {
+    right: 100%;
+    z-index: 3000;
 }
 
 
