@@ -26,6 +26,10 @@ $('#seemore button').click(function () {
 
 $('.back-to-start').click(function () {
     $('.back-to-start').hide();
-    $('#content-for-geeky-people').removeClass('terminal_visible').addClass('terminal_invisible');
-    $('#content-for-human-beings').removeClass('webpage_visible').addClass('webpage_invisible');
+    if ($('#content-for-geeky-people').hasClass('terminal_visible')) {
+        $('#content-for-geeky-people').removeClass('terminal_visible').addClass('terminal_invisible');
+    }
+    if ($('#content-for-human-beings').hasClass('webpage_visible')) {
+        $('#content-for-human-beings').removeClass('webpage_visible').addClass('webpage_invisible');
+    }
 })
