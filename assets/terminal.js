@@ -21,7 +21,7 @@ var print_lines = function (lines) {
         $('#shell span.cmd-line').last().after('<span class="cmd-line">' + lines[i] +'</span');
         remove_extra_lines();
     }
-    
+
 }
 
 var enter_shell_mode = function () {
@@ -55,9 +55,9 @@ var get_last_char = function(str) {
             return str.slice(index);
         }
     }
-    
+
     return last_char;
-    
+
 }
 
 var append_char = function (e) {
@@ -66,20 +66,20 @@ var append_char = function (e) {
     content = cmd_line.html();
     if (content.length < 70){
 
-        var char = $.getChar(e);        
-        added_char = String.fromCharCode(char);    
+        var char = $.getChar(e);
+        added_char = String.fromCharCode(char);
         added_char = filter_char(added_char);
         cmd_line.html(content + added_char);
     }
 }
 
 var delete_char = function() {
-    
+
     cmd_line = $('#shell .cmd').last();
     content = cmd_line.html().trim();
     if (content.length > 0){
         last_char = get_last_char(content);
-        cmd_line.html(content.slice(0, content.length - last_char.length));    
+        cmd_line.html(content.slice(0, content.length - last_char.length));
     }
 
 }
@@ -105,7 +105,7 @@ var run_command = function () {
             command_not_found();
         }
     }
-    
+
 
 }
 
@@ -126,7 +126,7 @@ var wget = function(command) {
 
     if ((file == 'source.zip') || (file == 'public.key') || (file == 'resume.pdf'))
     {
-        print_lines([ 'Downloading ' + file + '...']);    
+        print_lines([ 'Downloading ' + file + '...']);
         window.open('files/' + file, '_blank');
     }
     else {
@@ -135,8 +135,8 @@ var wget = function(command) {
 }
 
 
-var ls = function() {   
-    
+var ls = function() {
+
     var lines = [
         "-rw-rw-r--  1 seb seb 49728 Nov  6 01:20 resume.pdf",
         "-rw-rw-r--  1 seb seb&nbsp;&nbsp;8625 Nov  6 01:20 public.key",
@@ -162,7 +162,7 @@ var help = function() {
 }
 
 
-var run_shell = function(e) {   
+var run_shell = function(e) {
     if (e.keyCode == 13)
     {
             run_command();
@@ -173,7 +173,7 @@ var run_shell = function(e) {
         delete_char();
     }
     else {
-        append_char(e);    
+        append_char(e);
     }
 }
 
@@ -184,20 +184,20 @@ var page_scrolldown = function(page_id, manpage) {
         $(page_id +' span.show').first().removeClass('show').addClass('masked');
         next_line.addClass('show').removeClass('masked');
         if (manpage == true) {
-            $('#line-count').html(parseInt($('#line-count').html()) + 1);    
+            $('#line-count').html(parseInt($('#line-count').html()) + 1);
         }
-        
+
     }
 }
 
 var page_scrollup = function (page_id, manpage) {
 
-    prev_line = $(page_id +' span.show').first().prev(); 
+    prev_line = $(page_id +' span.show').first().prev();
     if (prev_line.length > 0) {
         $(page_id +' span.show').last().removeClass('show').addClass('masked');
         prev_line.addClass('show').removeClass('masked');
         if (manpage) {
-            $('#line-count').html(parseInt($('#line-count').html()) - 1);    
+            $('#line-count').html(parseInt($('#line-count').html()) - 1);
         }
     }
 }
@@ -217,11 +217,11 @@ var run_manpage = function(e) {
         page_scrollup('#manpage-seb', true);
     }
     else if(e.keyCode == 81) {
-        enter_shell_mode(); 
+        enter_shell_mode();
     }
 
     else if(e.charCode == 113) {
-        enter_shell_mode(); 
+        enter_shell_mode();
     }
 
 }
@@ -230,10 +230,10 @@ var run_terminal = function(e) {
 
     if (mode == 'shell')
     {
-        run_shell(e);        
-    }   
+        run_shell(e);
+    }
     else if (mode == 'manpage') {
-        run_manpage(e);    
+        run_manpage(e);
     }
 
 }
@@ -241,11 +241,13 @@ var run_terminal = function(e) {
 $(document).keydown(function(e) {
     e.preventDefault();
     if ($('#content-for-geeky-people').hasClass('terminal_visible')){
-        run_terminal(e);    
-    } 
+        run_terminal(e);
+    }
 });
 
 $(document).keydown(function(e) {
     e.preventDefault();
 });
+
+$( "#terminal" ).draggable();
 
